@@ -1,0 +1,11 @@
+require 'spec_helper'
+require 'rails_helper'
+
+describe ListsController do
+  #describe "POST create" do
+    #it "creates the list" do
+    #  post :create, list: {name: "Alabama"}
+    #  expect(List.count).to eq(1)
+    #end
+  #end
+end

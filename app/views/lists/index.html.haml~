@@ -1,0 +1,4 @@
+.well
+
+- @lists.each do |list|
+  = list.name 

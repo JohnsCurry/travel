@@ -1,0 +1,12 @@
+require 'spec_helper'
+require 'rails_helper'
+
+
+describe Todo do
+  it "saves itself" do
+    alabama = List.create(name: "Alabama")
+    todo = Todo.new(title: "Take selfie with 'Welcome to Alabama' sign", list: alabama)
+    todo.save
+    expect(Todo.first).to eq(todo)
+  end
+end
