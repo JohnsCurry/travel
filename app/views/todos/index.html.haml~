@@ -1,0 +1,10 @@
+- value = true
+= form_for @todos do |f|
+  - @lists.each do |list|
+    = list.name
+    %br
+    - list.todos.each do |todo|
+      = check_box_tag "#{todo.name}", "#{todo.id}", checked= todo.checked
+      = label_tag "#{todo}", "#{todo.name}"
+      %br
+  = submit_tag("Update")
