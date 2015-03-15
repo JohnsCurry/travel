@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'rails_helper'
 
 describe ListsController do
-
+  
   describe "GET index" do
     it "sets @lists" do
       alabama = List.create(name: "Alabama")
@@ -14,8 +14,8 @@ describe ListsController do
   
   describe "GET new" do
     it "sets @list" do
-    get :new
-    expect(assigns(:list)).to be_instance_of(List)
+      get :new
+      expect(assigns(:list)).to be_instance_of(List)
     end
   end
   
@@ -50,5 +50,6 @@ describe ListsController do
       end
     end
   end
-end
   
+end
+

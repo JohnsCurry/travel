@@ -1,10 +1,13 @@
 - value = true
 = form_tag update_todos_path do
   - @lists.each do |list|
-    = list.name
-    %br
-    - list.todos.each do |todo|
-      = check_box_tag "todos[][checked]", "#{todo.id}", checked= todo.checked
-      = label_tag "#{todo}", "#{todo.name}"
+    %div{:class => "location"}
+      = list.name
       %br
+      %div{:class => "todo"}
+        - list.todos.each do |todo|
+          = check_box_tag "todos[][checked]", "#{todo.id}", checked= todo.checked
+          = label_tag "#{todo}", "#{todo.name}"
+          %br
+        %br
   = submit_tag("Update")
